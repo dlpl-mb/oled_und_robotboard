@@ -6,7 +6,8 @@
         "radio": "*",
         "microphone": "*",
         "SSD1306_OLED": "github:muselab/pxt-muselab-oled-v2#v2.0.20",
-        "pxt-sonar": "github:microsoft/pxt-sonar#v0.0.6"
+        "pxt-sonar": "github:microsoft/pxt-sonar#v0.0.6",
+        "robotbit": "github:kittenbot/pxt-robotbit#v0.4.8"
     },
     "files": [
         "main.blocks",
