@@ -1,4 +1,3 @@
-led.enable(false)
 basic.showIcon(IconNames.Heart)
 MuseOLED.init()
 basic.pause(100)
@@ -8,6 +7,7 @@ MuseOLED.writeStringNewLine("Alois Bachinger")
 MuseOLED.newLine()
 MuseOLED.writeStringNewLine("Temperatur: 12 grad")
 robotbit.MotorRun(robotbit.Motors.M1A, 161)
+led.enable(false)
 basic.forever(function () {
     basic.pause(2000)
     MuseOLED.clear()
