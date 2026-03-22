@@ -1,3 +1,4 @@
+let abstand1 = 0
 basic.showIcon(IconNames.Heart)
 MuseOLED.init()
 basic.pause(100)
@@ -19,10 +20,16 @@ basic.forever(function () {
     PingUnit.Centimeters
     ))
     basic.pause(200)
-    MuseOLED.writeNumNewLine(sonar.ping(
+    abstand1 = sonar.ping(
     DigitalPin.P1,
     DigitalPin.P8,
     PingUnit.Centimeters
-    ))
+    )
+    MuseOLED.writeNumNewLine(abstand1)
     robotbit.MotorRun(robotbit.Motors.M1A, -108)
+    if (abstand1 > 15) {
+        robotbit.Servo(robotbit.Servos.S1, 143)
+    } else {
+        robotbit.Servo(robotbit.Servos.S1, 90)
+    }
 })
